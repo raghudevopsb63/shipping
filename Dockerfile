@@ -1,5 +1,5 @@
 FROM          maven
-RUN           useradd roboshop
+RUN           useradd -d /home/roboshop roboshop
 RUN           chown roboshop:roboshop /home/roboshop -R
 USER          roboshop
 WORKDIR       /home/roboshop
