@@ -3,7 +3,7 @@ RUN           useradd roboshop
 USER          roboshop
 WORKDIR       /home/roboshop
 COPY          pom.xml .
-COPY          src .
+COPY          src src
 RUN           ls -ltr
 RUN           mvn package
 RUN           mv target/shipping-1.0.jar shipping.jar
