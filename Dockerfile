@@ -1,8 +1,8 @@
 FROM          maven
 RUN           useradd roboshop
+RUN           chown roboshop:roboshop /home/roboshop -R
 USER          roboshop
 WORKDIR       /home/roboshop
-RUN           chown roboshop:roboshop /home/roboshop -R
 COPY          pom.xml .
 COPY          src/ src/
 RUN           ls -ltr
