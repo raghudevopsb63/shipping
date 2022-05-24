@@ -1,6 +1,5 @@
 FROM          maven
-RUN           useradd -d /home/roboshop roboshop
-RUN           chown roboshop:roboshop /home/roboshop -R
+RUN           useradd -m roboshop
 USER          roboshop
 WORKDIR       /home/roboshop
 COPY          pom.xml .
